@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffe5ef">
+  <title>Study Bloom – Học tập hiệu quả</title>
+  <style>
+    :root{--pink:#f5a9c4;--pink2:#ffe5ef;--rose:#d96b95;--cream:#fffaf7;--ink:#51434a;--muted:#887780;--mint:#dff3e9;--lav:#eee7ff;--yellow:#fff2c9}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65}
+    header{background:linear-gradient(120deg,#ffe3ed,#fff0e8 60%,#eee7ff);padding:22px 7% 58px;position:relative;overflow:hidden}
+    nav{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:15px}
+    .logo{font-weight:900;color:#bd5f85;font-size:1.25rem;letter-spacing:.3px}
+    nav a{color:#765966;text-decoration:none;font-size:.92rem;margin-left:18px;font-weight:650}
+    nav a:hover{color:#c65f8b}
+    .hero{max-width:1100px;margin:55px auto 0;display:grid;grid-template-columns:1.4fr .8fr;align-items:center;gap:30px}
+    .tag{display:inline-block;background:#fff9;border:1px solid #fff;padding:6px 13px;border-radius:30px;color:#b75c81;font-size:.85rem;font-weight:700}
+    h1{font-size:clamp(2.2rem,5vw,4.2rem);line-height:1.12;margin:17px 0;color:#684c59}
+    h1 span{color:#d66f98}.hero p{max-width:570px;color:#796a71;font-size:1.06rem}
+    .cta{display:inline-block;background:#d9789d;color:white;text-decoration:none;padding:12px 20px;border-radius:14px;font-weight:750;margin-top:10px;box-shadow:0 7px 18px #d9789d35}
+    .hero-art{font-size:8rem;text-align:center;background:#ffffff9c;border:1px solid white;border-radius:38px;padding:28px;box-shadow:0 15px 40px #d98ba51c;transform:rotate(2deg)}
+    main{max-width:1100px;margin:auto;padding:45px 7% 70px}
+    section{margin:0 0 58px;scroll-margin-top:25px}
+    .section-head{text-align:center;margin-bottom:25px}
+    h2{font-size:1.8rem;margin:0 0 6px;color:#765362}
+    .section-head p{margin:0;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+    .card{background:white;border:1px solid #f5e8ed;border-radius:21px;padding:21px;box-shadow:0 8px 24px #795b6810}
+    .card .emoji{font-size:2rem}.card h3{margin:8px 0 5px;color:#80596b}.card p{margin:0;color:#81737a;font-size:.95rem}
+    .number{display:inline-grid;place-items:center;width:29px;height:29px;border-radius:50%;background:var(--pink2);color:#bb6085;font-weight:800;margin-right:7px}
+    .routine{background:linear-gradient(135deg,#fff0f5,#f5f0ff);border-radius:25px;padding:25px}
+    .routine ul{list-style:none;padding:0;margin:12px 0 0}
+    .routine li{padding:10px 0;border-bottom:1px dashed #e7cbd7}
+    .routine li:last-child{border:0}
+    .routine input{accent-color:#d9789d;width:17px;height:17px;vertical-align:middle;margin-right:9px}
+    .timer-wrap{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center}
+    .timer{background:white;border:1px solid #f2dce5;border-radius:24px;padding:25px;text-align:center}
+    #clock{font-size:3.4rem;font-weight:850;letter-spacing:2px;color:#c9688f;margin:7px}
+    .timer button{border:0;border-radius:12px;padding:10px 17px;margin:5px;background:#d9789d;color:white;font-weight:750;cursor:pointer}
+    .timer button.secondary{background:#f7e8ef;color:#995b76}
+    .timer-note{background:var(--mint);padding:23px;border-radius:23px}
+    .timer-note h3{margin-top:0;color:#547d69}
+    .quote{background:var(--yellow);border-radius:22px;text-align:center;padding:25px;font-size:1.1rem;font-weight:700;color:#8c7544}
+    footer{text-align:center;background:#ffe8f0;color:#8b6575;padding:24px 15px;font-size:.9rem}
+    @media(max-width:760px){nav{align-items:flex-start;flex-direction:column}nav a{margin:0 13px 0 0}.hero{grid-template-columns:1fr;margin-top:35px}.hero-art{font-size:6rem;padding:15px}.grid{grid-template-columns:1fr}.timer-wrap{grid-template-columns:1fr}main{padding-top:35px}}
+  </style>
+</head>
+<body>
+<header id="top">
+  <nav>
+    <div class="logo">🌷 Study Bloom</div>
+    <div><a href="#tips">Mẹo học</a><a href="#routine">Thói quen</a><a href="#timer">Pomodoro</a></div>
+  </nav>
+  <div class="hero">
+    <div>
+      <span class="tag">Góc học tập nhỏ xinh ✨</span>
+      <h1>Học thông minh,<br><span>tỏa sáng mỗi ngày!</span></h1>
+      <p>Một chút kế hoạch, một chút kiên trì và những phương pháp phù hợp sẽ giúp việc học nhẹ nhàng, hiệu quả hơn.</p>
+      <a class="cta" href="#tips">Khám phá mẹo học →</a>
+    </div>
+    <div class="hero-art" aria-label="Sách và hoa">📚🌸</div>
+  </div>
+</header>
+
+<main>
+  <section id="tips">
+    <div class="section-head"><h2>🎀 6 mẹo học tập hiệu quả</h2><p>Thử áp dụng từng mẹo nhỏ mỗi ngày nhé!</p></div>
+    <div class="grid">
+      <article class="card"><div class="emoji">⏰</div><h3>1. Lập thời gian biểu</h3><p>Chia thời gian cho từng môn và đặt mục tiêu vừa sức. Ưu tiên việc quan trọng trước.</p></article>
+      <article class="card"><div class="emoji">🍅</div><h3>2. Học theo Pomodoro</h3><p>Tập trung khoảng 25 phút, nghỉ 5 phút. Sau vài lượt, nghỉ dài hơn để đầu óc thư giãn.</p></article>
+      <article class="card"><div class="emoji">🧠</div><h3>3. Tự kiểm tra</h3><p>Đóng sách và thử tự nhắc lại kiến thức. Làm câu hỏi ngắn giúp nhớ lâu hơn.</p></article>
+      <article class="card"><div class="emoji">📝</div><h3>4. Ghi chú dễ hiểu</h3><p>Dùng từ khóa, sơ đồ tư duy và màu sắc vừa phải để nhìn lại bài nhanh chóng.</p></article>
+      <article class="card"><div class="emoji">📵</div><h3>5. Giảm xao nhãng</h3><p>Để điện thoại xa tầm tay, tắt thông báo và chuẩn bị đủ dụng cụ trước khi học.</p></article>
+      <article class="card"><div class="emoji">💤</div><h3>6. Nghỉ ngơi hợp lý</h3><p>Ngủ đủ, uống nước và vận động nhẹ. Nghỉ ngơi cũng là một phần của việc học tốt.</p></article>
+    </div>
+  </section>
+
+  <section id="routine">
+    <div class="section-head"><h2>🌼 Checklist học tập hôm nay</h2><p>Tích vào từng việc khi bạn hoàn thành.</p></div>
+    <div class="routine">
+      <strong>Việc nhỏ – tiến bộ lớn</strong>
+      <ul>
+        <li><label><input type="checkbox"> Sắp xếp góc học tập gọn gàng</label></li>
+        <li><label><input type="checkbox"> Xem lại bài đã học hôm nay</label></li>
+        <li><label><input type="checkbox"> Hoàn thành bài tập quan trọng</label></li>
+        <li><label><input type="checkbox"> Ôn lại kiến thức bằng cách tự kiểm tra</label></li>
+        <li><label><input type="checkbox"> Chuẩn bị sách vở cho ngày mai</label></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="timer">
+    <div class="section-head"><h2>🍅 Đồng hồ Pomodoro</h2><p>Bắt đầu một phiên tập trung nho nhỏ nhé!</p></div>
+    <div class="timer-wrap">
+      <div class="timer">
+        <div id="mode">Thời gian tập trung</div>
+        <div id="clock">25:00</div>
+        <button id="start">Bắt đầu</button><button class="secondary" id="pause">Tạm dừng</button><button class="secondary" id="reset">Đặt lại</button>
+        <div style="margin-top:12px"><button class="secondary" id="focus">25 phút học</button><button class="secondary" id="break">5 phút nghỉ</button></div>
+      </div>
+      <div class="timer-note"><h3>🌿 Nhắc nhỏ</h3><p>Trong thời gian tập trung, hãy chỉ làm một việc. Khi đến giờ nghỉ, đứng dậy, duỗi người hoặc uống một chút nước.</p><p><strong>Không cần hoàn hảo, chỉ cần tiến bộ từng chút một!</strong></p></div>
+    </div>
+  </section>
+
+  <div class="quote">“Mỗi ngày học thêm một điều mới là mỗi ngày bạn tiến gần hơn đến mục tiêu.” 🌷</div>
+</main>
+<footer>Made with ♡ by Study Bloom · Chúc bạn học tập vui vẻ và hiệu quả!</footer>
+
+<script>
+  let remaining = 25 * 60;
+  let interval = null;
+  let currentMode = "focus";
+  const clock = document.getElementById("clock");
+  const mode = document.getElementById("mode");
+  function render(){
+    const m = Math.floor(remaining / 60).toString().padStart(2,"0");
+    const s = (remaining % 60).toString().padStart(2,"0");
+    clock.textContent = `${m}:${s}`;
+    document.title = `${m}:${s} – Study Bloom`;
+  }
+  function stop(){ if(interval){clearInterval(interval);interval=null;} }
+  function setMode(kind){
+    stop(); currentMode=kind; remaining=(kind==="focus"?25:5)*60;
+    mode.textContent=kind==="focus"?"Thời gian tập trung":"Thời gian nghỉ ngơi";
+    render();
+  }
+  document.getElementById("start").addEventListener("click",()=>{
+    if(interval) return;
+    interval=setInterval(()=>{
+      if(remaining>0){remaining--;render();}
+      else{stop();mode.textContent="Hoàn thành rồi! 🎉";alert(currentMode==="focus"?"Bạn đã hoàn thành phiên học! Hãy nghỉ ngơi nhé.":"Hết giờ nghỉ! Sẵn sàng học tiếp nào.");}
+    },1000);
+  });
+  document.getElementById("pause").addEventListener("click",stop);
+  document.getElementById("reset").addEventListener("click",()=>setMode(currentMode));
+  document.getElementById("focus").addEventListener("click",()=>setMode("focus"));
+  document.getElementById("break").addEventListener("click",()=>setMode("break"));
+  render();
+</script>
+</body>
+</html>
